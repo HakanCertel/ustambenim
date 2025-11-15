@@ -110,10 +110,24 @@ a{
     color:var(--yellow-color) ;
 }
 .slider{
-    position: fixed;
+    /* position: fixed; */
+    width: 100%;
+   margin-top: 5rem;
     right: 8rem;
     top: 4rem;
     /* background-color: aqua; */
+}
+.service__title{
+    color: var(--white-color);
+    font-size: var(--big-font-size);
+    text-align: center;
+}
+.service_item{
+    display: grid;
+    grid-template-columns: 35px auto;
+    align-items: center;
+    column-gap: .5rem;
+    color: var(--white-color);
 }
 .slide__link{
     display: grid;
@@ -124,8 +138,8 @@ a{
     box-shadow: 0px 4px 16px hwb(115 62% 1%);
     padding: .5rem;
     /* box-shadow: 0px 8px 16px hwb(48 96% 2%); */
-    opacity: 0;
-    transform: translateX(400px);
+    opacity: 1;
+    /* transform: translateX(400px); */
     transition: opacity .4s,transform .1s;
 }
 
@@ -141,6 +155,11 @@ a{
     width: 35px;
     height: 35px;
     border-radius: .5rem;
+    cursor: pointer;
+    transition: transform .4s;
+}
+.slide__image{
+    font-size: var(--small-font-size);
     cursor: pointer;
     transition: transform .4s;
 }
@@ -160,6 +179,10 @@ a{
   
 }
 @media screen and (max-width: 850px){
+    .slide__link{
+        grid-template-columns: repeat(3,auto);
+        row-gap: .5rem;
+    }
     .nav__menu{
         position: fixed;
         top: -120%;
@@ -194,7 +217,7 @@ a{
     }
     .sections{
         position: relative;
-        margin-top: 7rem;
+        /* margin-top: rem; */
         margin-bottom: 4rem;
 
         width: 100%;
@@ -279,7 +302,7 @@ a{
     }
     .sections{
         position: relative;
-        top: 5rem;
+        top: 2rem;
         margin-bottom: 4rem;
         left: 2rem;
         width: 100%;
@@ -297,7 +320,7 @@ a{
                 grid-template-columns: repeat(2,1fr);
                 align-items: center;
                 column-gap: 2rem;
-                margin-top: 5rem;
+                margin-top: 1rem;
                 margin-right: 5rem;
 
                 padding-left: 2rem;
@@ -305,7 +328,7 @@ a{
                 box-shadow: 0px 4px 36px hsla(0, 0%, 95%,.5);
                 img{
                     width: 100%;
-                    height: 400px;
+                    height: 300px;
                     border-radius: 2rem;
                 }
                 .content__data{

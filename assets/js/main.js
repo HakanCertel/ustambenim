@@ -7,6 +7,17 @@ document.addEventListener("DOMContentLoaded",()=>{
     const slider=document.querySelector(".slider")
     const sliderItems=document.querySelectorAll(".slide__link")
     const slideImages=slider.querySelectorAll(".slide__image")
+    debugger
+    const about=document.getElementById("main");
+    // const aboutEvent=about.querySelector(".nav__logo")
+    about.addEventListener('click',(e)=>{
+        debugger
+        const id="#main__page";
+        const section=mainSection.querySelector(id)
+        const activeSection=mainSection.querySelector(".active-section");
+        activeSection?.classList.remove("active-section")
+        section.classList.add("active-section")
+    })
     
     // firstSection.setAttribute("style","left:32px")
     firstSection.classList.add("active-section")
@@ -66,7 +77,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 const navMenu=document.getElementById('nav__menu')
 const navToggle=document.getElementById('toogle__logo')
 const navClose=document.getElementById('close__logo')
-debugger
 // Menu Show
 if(navToggle){
     navToggle.addEventListener('click',()=>{
