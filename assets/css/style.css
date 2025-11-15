@@ -43,6 +43,9 @@ a{
     text-decoration: none;
     color: var(--white-color);
 }
+.letter_color{
+    color: hsl(39, 99%, 55%);
+}
 /* Background */
 .main{
     overflow: hidden; 
