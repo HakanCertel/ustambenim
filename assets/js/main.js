@@ -8,14 +8,34 @@ document.addEventListener("DOMContentLoaded",()=>{
     const sliderItems=document.querySelectorAll(".slide__link")
     const slideImages=slider.querySelectorAll(".slide__image")
     const main=document.getElementById("main");
-    // const aboutEvent=about.querySelector(".nav__logo")
+    const about=document.getElementById("about")
+    const contact=document.getElementById("contact")
     main.addEventListener('click',(e)=>{
-        debugger
         const id="#main__page";
+        const section=mainSection.querySelector(id)
+        const activeSection=mainSection.querySelector(".active-section");
+        const currentlyActive=navList.querySelector(".active-link");
+        currentlyActive.classList.remove("active-link")
+        activeSection?.classList.remove("active-section")
+        section.classList.add("active-section")
+        slider.classList.remove("slider__none")
+    })
+    about.addEventListener('click',(e)=>{
+        debugger
+        const id="#about__page";
         const section=mainSection.querySelector(id)
         const activeSection=mainSection.querySelector(".active-section");
         activeSection?.classList.remove("active-section")
         section.classList.add("active-section")
+        slider.classList.add("slider__none")
+    })
+    contact.addEventListener('click',(e)=>{
+        const id="#contact__page";
+        const section=mainSection.querySelector(id)
+        const activeSection=mainSection.querySelector(".active-section");
+        activeSection?.classList.remove("active-section")
+        section.classList.add("active-section")
+        slider.classList.add("slider__none")
     })
     
     // firstSection.setAttribute("style","left:32px")
