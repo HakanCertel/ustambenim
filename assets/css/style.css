@@ -230,7 +230,7 @@ a{
             width: 100%;
             align-items: center;
             right: -100rem;
-
+            overflow-y: scroll;
             transition: all .8s;
             .section__content{
                 display: grid;

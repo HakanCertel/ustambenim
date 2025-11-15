@@ -7,10 +7,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     const slider=document.querySelector(".slider")
     const sliderItems=document.querySelectorAll(".slide__link")
     const slideImages=slider.querySelectorAll(".slide__image")
-    debugger
-    const about=document.getElementById("main");
+    const main=document.getElementById("main");
     // const aboutEvent=about.querySelector(".nav__logo")
-    about.addEventListener('click',(e)=>{
+    main.addEventListener('click',(e)=>{
         debugger
         const id="#main__page";
         const section=mainSection.querySelector(id)
