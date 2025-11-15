@@ -87,6 +87,8 @@ img{
     display: block;
     min-width: 250px;
     color: hsl(39, 99%, 55%);
+    box-shadow: 0 4px 16px hsl(202, 25%, 50%);
+    border-radius: 2rem;
     font-size: var(--biggest-font-size);
     font-weight: var(--font-semi-bold);
     transition: color .4s;
