@@ -1,0 +1,121 @@
+.head{
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem;
+}
+
+
+
+/* Sections */
+.sections{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+section{
+    position: absolute;
+    z-index: 50;
+    display: grid;
+    margin-bottom: 4rem;
+    align-items: center;
+    top: 8rem;
+    right: -100rem;
+    margin-inline: 2rem;
+    transition: all .4s;
+}
+.active-section{
+    right: 2rem;
+}
+.passive-section{
+    right: -100rem;
+}
+.section__content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-items: center;
+    width: auto;
+    height: 100%;
+    border-radius: 2rem;
+    box-shadow: 0px 4px 36px hsla(0, 0%, 95%,.5);
+}
+.content__data{
+    display: grid;
+    row-gap: 1rem;
+    margin-left: 4rem;
+    font-size: var(--big-font-size);
+    color: var(--white-color);
+    .content__header{
+        letter-spacing: -1px;
+        line-height: 100%;
+    }
+    .content__description{
+        word-break: normal;
+        font-size: 1.25rem;
+        letter-spacing: 1px;
+        line-height: 120%;
+        .description__part{
+            color: var(--main-color);
+            font-weight: var(--font-bold);
+        }
+    }
+}
+.content__image{
+    /* justify-self: end;; */
+    width: 100%;
+    /* height: 340px; */
+    border-radius: 2rem;
+}
+@media screen and (max-width: 942px){
+    .sections{
+        height: 1000px;
+    }
+    .section__content{
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        align-items: center;
+        /* margin-right: 2rem; */
+    }
+    .content__data{
+        margin: 0;
+        margin-bottom: 2rem;
+
+    }
+    .content__image{
+        grid-row: -1;
+    }
+    .close__logo,
+    .toogle__logo{
+        display: inline-block;
+        /* margin-right: 4rem; */
+        cursor: pointer;
+    }
+    .nav__menu{
+        position: fixed;
+        display: flex;
+        /* justify-content: space-between; */
+        margin-top: 10rem;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem;
+        width: 100%;
+        transition: visibility .4s;
+        background-color: hsla(0, 0%, 0%,.8);
+        right: -55rem;
+        /* visibility: hidden; */
+        /* top: -.5rem; */
+        .nav__list{
+            display: flex;
+            flex-direction: column;
+            align-self: end;
+        }
+    }
+    .avtive-menu{
+        /* position: relative; */
+        right: 0;
+        width: 100%;
+        z-index: 202;
+    }
+}
+
